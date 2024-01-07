@@ -22,7 +22,7 @@ const reducer = (state: State, action: Action): State => {
 };
 
 export function useStore() {
-  const [state, setState] = useState();
+  const [state, setState] = useState("init state");
 
   return { state };
 }
