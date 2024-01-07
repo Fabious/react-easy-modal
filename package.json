@@ -1,7 +1,17 @@
 {
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "tsup --watch",
+    "build": "tsup",
+    "test": "jest --runInBand",
+    "setup": "pnpm i && cd site && pnpm i && cd .. && pnpm run link",
+    "link": "pnpm link ./site/node_modules/react && pnpm link ./site/node_modules/react-dom"
+  },
   "devDependencies": {
     "@types/react": "^18.2.47",
     "react": "^18.2.0",
+    "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   }
 }
